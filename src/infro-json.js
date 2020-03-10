@@ -2,59 +2,39 @@ import react,{Component} from "react";
 
 const Information = [
   {
-    "name":"Samule",
-    "age":21,
-    "country":"USA"
+    "label":"Fraise",
+    "season":[0],
+    "emoji":"🍓"
   },
   {
-    "name":"Sam",
-    "age":21,
-    "country":"USA"
+    "label":"Pomme",
+    "season":[1, 2, 3, 4],
+    "emoji":"🍏"
   },
   {
-    "name":"Mark",
-    "age":21,
-    "country":"Africa"
+    "label":"Orange",
+    "season": [1],
+    "emoji":"🍊"
   },
   {
-    "name":"Markus",
-    "age":21,
-    "country":"Africa"
+    "label":"Citron",
+    "season": [2],
+    "emoji":"🍋"
   },
   {
-    "name":"Aayush",
-    "age":21,
-    "country":"India"
+    "label":"Banane",
+    "season": [2],
+    "emoji":"🍌"
   },
   {
-    "name":"Sean",
-    "age":21,
-    "country":"Ireland"
+    "label":"Pêche",
+    "season": [1],
+    "emoji":"🍑"
   },
   {
-    "name":"Eduardo",
-    "age":21,
-    "country":"France"
-  },
-  {
-    "name":"Dustin",
-    "age":21,
-    "country":"Spain"
-  },
-  {
-    "name":"Alexendra",
-    "age":21,
-    "country":"USA"
-  },
-  {
-    "name":"Lee",
-    "age":21,
-    "country":"China"
-  },
-  {
-    "name":"Jim",
-    "age":21,
-    "country":"Korea"
+    "label":"Cerise",
+    "season": [5],
+    "emoji":"🍒"
   }
 ];
 
