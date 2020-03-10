@@ -76,7 +76,7 @@ class App extends Component {
     }
     else  {
       return(
-      <div styles={{ backgroundImage:`url('./public/fond.png')` }}>
+      <div >
         <ul>
           <li style={styleInfo}>
             <h1 className="non">Non !</h1>
