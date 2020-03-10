@@ -69,6 +69,7 @@ ul {
 }
 
 
+
 textarea:focus, input:focus{
     outline: none;
     border-color: red;

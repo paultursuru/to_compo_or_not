@@ -93,7 +93,7 @@ class App extends Component {
     return (
       <div className="container">
       <h1 className="titre"> Est-ce que c'est la saison ? </h1>
-      <input type="text" placeholder="Entrez un fruit" style={elementStyle} onChange={(e)=>this.searchSpace(e)} />
+      <input type="text" placeholder="Entrer un fruit ou un légume" style={elementStyle} onChange={(e)=>this.searchSpace(e)} />
         {items[0]}
       </div>
     )
