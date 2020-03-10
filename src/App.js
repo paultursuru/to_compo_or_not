@@ -22,7 +22,7 @@ class App extends Component {
   render(){
     const styleInfo = {
       fontSize: 'large',
-      padding: '16px 24px',
+      padding: '10px 18px',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
@@ -30,7 +30,7 @@ class App extends Component {
       background: 'white',
       boxShadow: '0 0 8px rgba(0,0,0,0.2)',
       borderRadius: '20px',
-      width: '60vh',
+      width: '50vh',
     }
     const elementStyle ={
       backgroundColor: 'transparent',
@@ -42,7 +42,7 @@ class App extends Component {
       borderRadius: '0px',
       fontFamily: 'sans-serif',
       fontSize: '40px',
-      lineHeight: '21px',
+      lineHeight: '40px',
       letterSpacing: '1px',
     }
     const emojiStyle = {
