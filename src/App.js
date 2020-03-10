@@ -35,7 +35,7 @@ class App extends Component {
     const elementStyle ={
       backgroundColor: 'transparent',
       margin: '9vh',
-      width: '80vh',
+      width: '400px',
       borderStyle: 'none none solid',
       borderWidth: '1px 1px 3px',
       borderColor: '#000',
