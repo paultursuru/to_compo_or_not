@@ -41,7 +41,7 @@ class App extends Component {
       borderColor: '#000',
       borderRadius: '0px',
       fontFamily: 'sans-serif',
-      fontSize: '40px',
+      fontSize: '28px',
       lineHeight: '40px',
       letterSpacing: '1px',
     }

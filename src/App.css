@@ -68,9 +68,12 @@ ul {
   text-align:center;
 }
 
+textarea, input {
+    height: fit-content;
+}
 
 
 textarea:focus, input:focus{
     outline: none;
-    border-color: red;
+    height: fit-content;
 }
