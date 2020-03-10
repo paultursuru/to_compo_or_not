@@ -29,7 +29,7 @@ class App extends Component {
       alignItems: 'center',
       background: 'white',
       boxShadow: '0 0 8px rgba(0,0,0,0.2)',
-      borderRadius: '4px',
+      borderRadius: '20px',
       width: '60vh',
     }
     const elementStyle ={
