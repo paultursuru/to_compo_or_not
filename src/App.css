@@ -32,8 +32,14 @@ ul {
   color: #61dafb;
 }
 
-h1 {
+.oui {
   font-size: 50px;
+  color: #5CC073;
+}
+
+.non {
+  font-size: 50px;
+  color: #EA9085;
 }
 
 @keyframes App-logo-spin {

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Information from './infro-json';
 
+
+
 class App extends Component {
 
   constructor(){
@@ -31,6 +33,7 @@ class App extends Component {
       width: '60vh',
     }
     const elementStyle ={
+      backgroundColor: 'transparent',
       margin: '9vh',
       width: '80vh',
       borderStyle: 'none none solid',
@@ -64,7 +67,7 @@ class App extends Component {
       <div>
         <ul>
           <li style={styleInfo}>
-            <h1>Oui !</h1>
+            <h1 className="oui">Oui !</h1>
             {/*<span >La {el.label.toLowerCase()} est de saison</span>*/}
             <span >{el.emoji}</span>
           </li>
@@ -77,7 +80,7 @@ class App extends Component {
       <div>
         <ul>
           <li style={styleInfo}>
-            <h1>Non !</h1>
+            <h1 className="non">Non !</h1>
             <p>Essaye plutôt en {months[el.season].toLowerCase()}</p>
             {/* <span >{el.label.toLowerCase()}</span>*/}
             <div style={emojiStyle}>{el.emoji}</div>
@@ -91,7 +94,7 @@ class App extends Component {
     return (
       <div className="container">
       <h1 className="titre"> Est-ce que c'est la saison ? </h1>
-        <input type="text" placeholder="Entrez un fruit" style={elementStyle} onChange={(e)=>this.searchSpace(e)} />
+      <input type="text" placeholder="Entrez un fruit" style={elementStyle} onChange={(e)=>this.searchSpace(e)} />
         {items[0]}
       </div>
     )
