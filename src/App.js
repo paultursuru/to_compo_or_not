@@ -80,7 +80,7 @@ class App extends Component {
         <ul>
           <li style={styleInfo}>
             <h1 className="non">Non !</h1>
-            <p className="paragraphe">Essaye plutôt en {months[el.season].toLowerCase()}</p>
+            <p className="paragraphe">Essaye plutôt en {months[el.season[0]].toLowerCase()}</p>
             {/* <span >{el.label.toLowerCase()}</span>*/}
             <div style={emojiStyle}>{el.emoji}</div>
           </li>
