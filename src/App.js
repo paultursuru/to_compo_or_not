@@ -46,13 +46,12 @@ class App extends Component {
       letterSpacing: '1px',
     }
     const emojiStyle = {
+      fontSize: '60px'
     }
 
     let today = new Date();
 
     const months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
-
-
 
     const items = Information.filter((data)=>{
       if(this.state.search == null)
@@ -69,7 +68,7 @@ class App extends Component {
           <li style={styleInfo}>
             <h1 className="oui">Oui !</h1>
             {/*<span >La {el.label.toLowerCase()} est de saison</span>*/}
-            <span >{el.emoji}</span>
+            <span style={emojiStyle}>{el.emoji}</span>
           </li>
         </ul>
       </div>
@@ -81,7 +80,7 @@ class App extends Component {
         <ul>
           <li style={styleInfo}>
             <h1 className="non">Non !</h1>
-            <p>Essaye plutôt en {months[el.season].toLowerCase()}</p>
+            <p className="paragraphe">Essaye plutôt en {months[el.season].toLowerCase()}</p>
             {/* <span >{el.label.toLowerCase()}</span>*/}
             <div style={emojiStyle}>{el.emoji}</div>
           </li>
