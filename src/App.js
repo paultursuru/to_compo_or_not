@@ -67,6 +67,7 @@ class App extends Component {
         <ul>
           <li style={styleInfo}>
             <h1 className="oui">Oui !</h1>
+            <p>{el.label}</p>
             {/*<span >La {el.label.toLowerCase()} est de saison</span>*/}
             <span style={emojiStyle}>{el.emoji}</span>
           </li>
@@ -81,7 +82,7 @@ class App extends Component {
           <li style={styleInfo}>
             <h1 className="non">Non !</h1>
             <p className="paragraphe">Essaye plutôt en {months[el.season[0]].toLowerCase()}</p>
-            {/* <span >{el.label.toLowerCase()}</span>*/}
+            <p>{el.label}</p>
             <div style={emojiStyle}>{el.emoji}</div>
           </li>
         </ul>
