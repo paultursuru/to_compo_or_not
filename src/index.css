@@ -6,10 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #FEFDF9;
-  background-image: url("https://images.unsplash.com/photo-1577003833154-a92bbd63ae13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1600&h=2000&q=10/1600x1200");
+  background-image: url("fond.jpg");
   background-repeat: no-repeat;
-  background-position-x: center;
-
+  background-position: top;
+  background-size: cover;
+  height: 100vh;
 }
 
 code {

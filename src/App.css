@@ -64,9 +64,13 @@ ul {
 }
 
 .titre {
-  font-size: 50px;
+  background: transparent;
+  padding: 14px;
+  font-size: 42px;
   text-align:center;
+  color: white;
 }
+
 
 textarea, input {
     height: fit-content;

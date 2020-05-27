@@ -30,10 +30,10 @@ class App extends Component {
       background: 'white',
       boxShadow: '0 0 8px rgba(0,0,0,0.2)',
       borderRadius: '20px',
-      width: '50vh',
+      width: '350px',
     }
     const elementStyle ={
-      backgroundColor: 'transparent',
+      backgroundColor: 'white',
       margin: '9vh',
       width: '400px',
       borderStyle: 'none none solid',
@@ -41,7 +41,7 @@ class App extends Component {
       borderColor: '#000',
       borderRadius: '0px',
       fontFamily: 'sans-serif',
-      fontSize: '28px',
+      fontSize: '24px',
       lineHeight: '40px',
       letterSpacing: '1px',
     }
@@ -66,7 +66,7 @@ class App extends Component {
       <div>
         <ul>
           <li style={styleInfo}>
-            <h1 className="oui">Oui !</h1>
+            <h1 class="oui">Oui !</h1>
             <p>{el.label}</p>
             {/*<span >La {el.label.toLowerCase()} est de saison</span>*/}
             <span style={emojiStyle}>{el.emoji}</span>
@@ -80,7 +80,7 @@ class App extends Component {
       <div >
         <ul>
           <li style={styleInfo}>
-            <h1 className="non">Non !</h1>
+            <h1 class="non">Non !</h1>
             <p>{el.label}</p>
             <div style={emojiStyle}>{el.emoji}</div>
           </li>
@@ -91,15 +91,27 @@ class App extends Component {
   })
 
     return (
-      <div className="container">
-      <h1 className="titre"> Est-ce que c'est la saison ? </h1>
-      <select type="text" class="custom-select" placeholder="Entrer un aliment" style={elementStyle} onChange={(e)=>this.searchSpace(e)}>
-        <option value="0">Choisis ton menu</option>
-        <option value="Fraise">Fraise</option>
-        <option value="Citron">Citron</option>
-      </select>
+      <div class="container">
+        <h1 class="titre"> Est-ce que je peux composter ça ? </h1>
+        <select id="selective" type="text" class="custom-select" placeholder="Entrer un aliment" style={elementStyle} onChange={(e)=>this.searchSpace(e)}>
+          <option id="option0" value="0">Choisis ton déchet...</option>
+          <option value="Laitages">Laitages</option>
+          <option value="Citron">Citron</option>
+        </select>
+        {
+          Information.map((el)=>{
+            console.log(el.label);
+            let newDiv = document.createElement("option[value={el.label}]");
+            let newContent = document.createTextNode("{el.label}");
+            newDiv.appendChild(newContent);
 
-        {items[0]}
+            // ajoute le nouvel élément créé et son contenu dans le DOM
+            const currentDiv = document.getElementById('selective');
+            document.body.insertAdjacentHTML('beforeend', newDiv);
+          })
+        }
+
+          {items[0]}
       </div>
     )
   }
