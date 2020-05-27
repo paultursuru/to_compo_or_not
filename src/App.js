@@ -49,9 +49,9 @@ class App extends Component {
       fontSize: '60px'
     }
 
-    let today = new Date();
+    // let today = new Date();
 
-    const months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+    // const months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
 
     const items = Information.filter((data)=>{
       if(this.state.search == null)
@@ -61,7 +61,7 @@ class App extends Component {
       }
 
     }).map(el=>{
-    if(el.season.includes(today.getMonth())) {
+    if(el.compo.includes(1)) {
       return(
       <div>
         <ul>
@@ -81,7 +81,6 @@ class App extends Component {
         <ul>
           <li style={styleInfo}>
             <h1 className="non">Non !</h1>
-            <p className="paragraphe">Essaye plutôt en {months[el.season[0]].toLowerCase()}</p>
             <p>{el.label}</p>
             <div style={emojiStyle}>{el.emoji}</div>
           </li>
@@ -94,7 +93,12 @@ class App extends Component {
     return (
       <div className="container">
       <h1 className="titre"> Est-ce que c'est la saison ? </h1>
-      <input type="text" placeholder="Entrer un fruit ou un légume" style={elementStyle} onChange={(e)=>this.searchSpace(e)} />
+      <select type="text" class="custom-select" placeholder="Entrer un aliment" style={elementStyle} onChange={(e)=>this.searchSpace(e)}>
+        <option value="0">Choisis ton menu</option>
+        <option value="Fraise">Fraise</option>
+        <option value="Citron">Citron</option>
+      </select>
+
         {items[0]}
       </div>
     )
