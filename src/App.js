@@ -102,17 +102,17 @@ class App extends Component {
       <div class="container">
         <h1 class="titre"> Est-ce que je peux composter ça ? </h1>
         <select id="selective" type="text" class="custom-select" placeholder="Entrer un aliment" style={elementStyle} onChange={(e)=>this.searchSpace(e)}>
-          <option id="option0" value="0">Choisis ton déchet</option>
+          <option id="option0" value="0">Choisis ton déchet...</option>
             {
               option_tags.forEach(tag => {
-                    let option = document.createElement("option");
-                    let content = document.createTextNode(tag.props.value);
-                    option.appendChild(content);
-                    const parent = document.getElementById("selective");
-                    console.log(option);
-                  }
-                )
-              }
+                  let option = document.createElement("option");
+                  let content = document.createTextNode(tag.props.value);
+                  option.appendChild(content);
+                  const parent = document.getElementById("selective");
+                  console.log(option);
+                }
+              )
+            }
         </select>
       </div>
     )
