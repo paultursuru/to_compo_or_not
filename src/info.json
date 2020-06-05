@@ -1,6 +1,4 @@
-import react,{Component} from "react";
-
-const Information = [
+[
   {
     "label":"Epluchures",
     "compo":[1],
@@ -67,7 +65,7 @@ const Information = [
     "emoji":"👌🍊"
   },
   {
-    "label":"Papier",
+    "label":"Papier journal, kraft",
     "compo": [1],
     "emoji":"👌📄"
   },
@@ -151,6 +149,4 @@ const Information = [
     "compo": [0],
     "emoji":"👎👼"
   }
-];
-
-export default Information;
+]

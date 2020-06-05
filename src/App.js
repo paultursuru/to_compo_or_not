@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
+import informations from './info.json';
 import './App.css';
-import Information from './infro-json';
-
-
-
 class App extends Component {
-
   constructor(){
     super();
-
     this.state={
-      search:null
+      selectOptions: [],
+      selectedValue: null
     };
   }
-
-  searchSpace=(event)=>{
-    let keyword = event.target.value;
-    this.setState({search:keyword})
+  componentWillMount = function(){
+      this.setState({
+        selectOptions : informations.map(item => item.label),
+        selectedValue : informations.map(item => item.label)[0]
+      });
   }
-
+  handleSelect=(e)=>{
+    this.setState({
+      selectedValue : e.target.value
+    })
+  }
   render(){
     const styleInfo = {
       fontSize: 'large',
@@ -48,22 +49,19 @@ class App extends Component {
     const emojiStyle = {
       fontSize: '60px'
     }
-
-    const items = Information.filter((data)=>{
-      if(this.state.search == null){
-          return
-        }
-      else if(data.label.toLowerCase().includes(this.state.search.toLowerCase())){
+    // let today = new Date();
+    // const months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+    const items = informations.filter((data)=>{
+      if(data.label.toLowerCase().includes(this.state.selectedValue.toLowerCase())){
           return data
       }
     }).map(el=>{
       if(el.compo.includes(1)) {
         return(
-          <div>
-          {console.log("ok")}
+          <div key={el.label}>
             <ul>
               <li style={styleInfo}>
-                <h1 class="oui">Oui !</h1>
+                <h1 className="oui">Oui !</h1>
                 <p>{el.label}</p>
                 <span style={emojiStyle}>{el.emoji}</span>
               </li>
@@ -73,11 +71,10 @@ class App extends Component {
       }
       else {
         return(
-          <div>
-          {console.log("not ok")}
+          <div key={el.label}>
             <ul>
               <li style={styleInfo}>
-                <h1 class="non">Non !</h1>
+                <h1 className="non">Non !</h1>
                 <p>{el.label}</p>
                 <div style={emojiStyle}>{el.emoji}</div>
               </li>
@@ -86,47 +83,27 @@ class App extends Component {
         )
       }
     })
-
     return (
       <div className="container">
-        <h1 className="titre"> Est-ce que je peux composter ça ? </h1>
-        <select type="text" className="custom-select" style={elementStyle} onChange={(e)=>this.searchSpace(e)}>
-          <option value="0">Choisis ton déchet...</option>
-          <option value="Epluchures">Epluchures</option>
-          <option value="Marc de Café">Marc de Café</option>
-          <option value="Filtre en papier">Filtre en papier</option>
-          <option value="Laitages">Laitages</option>
-          <option value="Croutes de fromage">Croutes de fromage</option>
-          <option value="Fanes de légumes">Fanes de légumes</option>
-          <option value="Fruits abimés">Fruits abimés</option>
-          <option value="Légumes abimés">Légumes abimés</option>
-          <option value="Coquilles d'oeuf">Coquilles d'oeuf</option>
-          <option value="Fleurs fanées">Fleurs fanées</option>
-          <option value="Plantes d'intérieur">Plantes d'intérieur</option>
-          <option value="Protections hygieniques">Protections hygieniques</option>
-          <option value="Agrumes">Agrumes</option>
-          <option value="Papier">Papier</option>
-          <option value="Carton">Carton</option>
-          <option value="Viande">Viande</option>
-          <option value="Poisson">Poisson</option>
-          <option value="Ail">Ail</option>
-          <option value="Oignon">Oignon</option>
-          <option value="Déjections d'animaux domestiques">Déjections d'animaux domestiques</option>
-          <option value="Sacs de supermarché avec la mention 'compostable'">Sacs de supermarché avec la mention 'compostable'</option>
-          <option value="Mauvaises herbes">Mauvaises herbes</option>
-          <option value="Plantes malades">Plantes malades</option>
-          <option value="Verre">Verre</option>
-          <option value="Métal">Métal</option>
-          <option value="Plastique">Plastique</option>
-          <option value="Contenu des sacs d'aspirateurs">Contenu des sacs d'aspirateurs</option>
-          <option value="Mégots">Mégots</option>
-          <option value="Couches-culottes">Couches-culottes</option>
-        </select>
+        <nav>
+          <h1 className="titre"> Est-ce que je peux composter ça ? </h1>
+          <form>
+            <select value={this.state.selectedValue} onChange={this.handleSelect} type="text" className="custom-select">
+              {
+                this.state.selectOptions.map(function(item){
+                  return(
+                    <option value={item} key={item}>{item}</option>
+                  )
+                })
+              }
+            </select>
+          </form>
+        </nav>
+        <main>
+          {items}
+        </main>
       </div>
     )
   }
 }
-
-
 export default App;
-

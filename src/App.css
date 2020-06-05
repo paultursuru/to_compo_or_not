@@ -48,6 +48,27 @@ ul {
   color: #757575;
 }
 
+form {
+  display: flex;
+}
+.custom-select {
+  background: white;
+  width: 400px;
+  border-style: none none solid;
+  border-width: 0 0 3px;
+  border-color: black;
+  font-size: 24px;
+  line-height: 40px;
+  margin: 9vh auto;
+}
+
+nav {
+margin: 0 auto;
+}
+main {
+margin: 20px auto;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
