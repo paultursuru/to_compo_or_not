@@ -57,9 +57,69 @@ const Information = [
     "emoji":"👌🌵"
   },
   {
-    "label":"Cendres",
+    "label":"Protections hygieniques",
     "compo": [1],
     "emoji":"👌"
+  },
+  {
+    "label":"Agrumes",
+    "compo": [1],
+    "emoji":"👌🍊"
+  },
+  {
+    "label":"Papier",
+    "compo": [1],
+    "emoji":"👌📄"
+  },
+  {
+    "label":"Carton",
+    "compo": [1],
+    "emoji":"👌📜"
+  },
+  {
+    "label":"Viande",
+    "compo": [1],
+    "emoji":"👌🥩"
+  },
+  {
+    "label":"Poisson",
+    "compo": [1],
+    "emoji":"👌🐠"
+  },
+  {
+    "label":"Ail",
+    "compo": [1],
+    "emoji":"👌🧄"
+  },
+  {
+    "label":"Oignon",
+    "compo": [1],
+    "emoji":"👌🧅"
+  },
+  {
+    "label":"Déjections d'animaux domestiques",
+    "compo": [1],
+    "emoji":"👌💩"
+  },
+  {
+    "label":"Sacs de supermarché avec la mention 'compostable'",
+    "compo": [1],
+    "emoji":"👌"
+  },
+  {
+    "label":"Litière pour chat",
+    "compo": [1],
+    "emoji":"👌🐈"
+  },
+  {
+    "label":"Mauvaises herbes",
+    "compo": [1],
+    "emoji":"👌🌿"
+  },
+  {
+    "label":"Plantes malades",
+    "compo": [1],
+    "emoji":"👌🍂"
   },
   {
     "label":"Verre",

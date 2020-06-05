@@ -54,69 +54,83 @@ class App extends Component {
     // const months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
 
     const items = Information.filter((data)=>{
-      if(this.state.search == null)
+      if(this.state.search == null){
           return
+        }
       else if(data.label.toLowerCase().includes(this.state.search.toLowerCase())){
           return data
       }
-
     }).map(el=>{
-    if(el.compo.includes(1)) {
-      return(
-      <div>
-        <ul>
-          <li style={styleInfo}>
-            <h1 class="oui">Oui !</h1>
-            <p>{el.label}</p>
-            {/*<span >La {el.label.toLowerCase()} est de saison</span>*/}
-            <span style={emojiStyle}>{el.emoji}</span>
-          </li>
-        </ul>
-      </div>
-      )
-    }
-    else  {
-      return(
-      <div >
-        <ul>
-          <li style={styleInfo}>
-            <h1 class="non">Non !</h1>
-            <p>{el.label}</p>
-            <div style={emojiStyle}>{el.emoji}</div>
-          </li>
-        </ul>
-      </div>
-      )
-    }
-  })
-
-  const option_tags = Information.map((el)=>{
-    return (
-      <option value={el.label}>{el.label}</option>
-    )
-  })
-
-
+      console.log(el.compo.includes(1))
+      if(el.compo.includes(1)) {
+        return(
+          <div>
+          {console.log("ok")}
+            <ul>
+              <li style={styleInfo}>
+                <h1 class="oui">Oui !</h1>
+                <p>{el.label}</p>
+                <span style={emojiStyle}>{el.emoji}</span>
+              </li>
+            </ul>
+          </div>
+        )
+      }
+      else {
+        return(
+          <div>
+            <ul>
+              <li style={styleInfo}>
+                <h1 class="non">Non !</h1>
+                <p>{el.label}</p>
+                <div style={emojiStyle}>{el.emoji}</div>
+              </li>
+            </ul>
+          </div>
+        )
+      }
+    })
 
     return (
-      <div class="container">
-        <h1 class="titre"> Est-ce que je peux composter ça ? </h1>
-        <select id="selective" type="text" class="custom-select" placeholder="Entrer un aliment" style={elementStyle} onChange={(e)=>this.searchSpace(e)}>
-          <option id="option0" value="0">Choisis ton déchet...</option>
-            {
-              option_tags.forEach(tag => {
-                  let option = document.createElement("option");
-                  let content = document.createTextNode(tag.props.value);
-                  option.appendChild(content);
-                  const parent = document.getElementById("selective");
-                  console.log(option);
-                }
-              )
-            }
+      <div className="container">
+        <h1 className="titre"> Est-ce que je peux composter ça ? </h1>
+        <select type="text" className="custom-select" style={elementStyle} onChange={(e)=>this.searchSpace(e)}>
+          <option value="0">Choisis ton déchet...</option>
+          <option value="Epluchures">Epluchures</option>
+          <option value="Marc de Café">Marc de Café</option>
+          <option value="Filtre en papier">Filtre en papier</option>
+          <option value="Laitages">Laitages</option>
+          <option value="Croutes de fromage">Croutes de fromage</option>
+          <option value="Fanes de légumes">Fanes de légumes</option>
+          <option value="Fruits abimés">Fruits abimés</option>
+          <option value="Légumes abimés">Légumes abimés</option>
+          <option value="Coquilles d'oeuf">Coquilles d'oeuf</option>
+          <option value="Fleurs fanées">Fleurs fanées</option>
+          <option value="Plantes d'intérieur">Plantes d'intérieur</option>
+          <option value="Protections hygieniques">Protections hygieniques</option>
+          <option value="Agrumes">Agrumes</option>
+          <option value="Papier">Papier</option>
+          <option value="Carton">Carton</option>
+          <option value="Viande">Viande</option>
+          <option value="Poisson">Poisson</option>
+          <option value="Ail">Ail</option>
+          <option value="Oignon">Oignon</option>
+          <option value="Déjections d'animaux domestiques">Déjections d'animaux domestiques</option>
+          <option value="Sacs de supermarché avec la mention 'compostable'">Sacs de supermarché avec la mention 'compostable'</option>
+          <option value="Mauvaises herbes">Mauvaises herbes</option>
+          <option value="Plantes malades">Plantes malades</option>
+          <option value="Verre">Verre</option>
+          <option value="Métal">Métal</option>
+          <option value="Plastique">Plastique</option>
+          <option value="Contenu des sacs d'aspirateurs">Contenu des sacs d'aspirateurs</option>
+          <option value="Mégots">Mégots</option>
+          <option value="Couches-culottes">Couches-culottes</option>
         </select>
       </div>
     )
   }
+
 }
 
 export default App;
+
