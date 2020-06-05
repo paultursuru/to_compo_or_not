@@ -49,10 +49,6 @@ class App extends Component {
       fontSize: '60px'
     }
 
-    // let today = new Date();
-
-    // const months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
-
     const items = Information.filter((data)=>{
       if(this.state.search == null){
           return
@@ -61,7 +57,6 @@ class App extends Component {
           return data
       }
     }).map(el=>{
-      console.log(el.compo.includes(1))
       if(el.compo.includes(1)) {
         return(
           <div>
@@ -79,6 +74,7 @@ class App extends Component {
       else {
         return(
           <div>
+          {console.log("not ok")}
             <ul>
               <li style={styleInfo}>
                 <h1 class="non">Non !</h1>
@@ -129,8 +125,8 @@ class App extends Component {
       </div>
     )
   }
-
 }
+
 
 export default App;
 
