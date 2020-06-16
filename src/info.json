@@ -1,6 +1,6 @@
 [
   {
-    "label":"Epluchures",
+    "label":"Epluchures de fruits et légumes",
     "compo":[1],
     "emoji":"👌"
   },
@@ -16,8 +16,8 @@
   },
   {
     "label":"Laitages",
-    "compo": [1],
-    "emoji":"👌🍦"
+    "compo": [0],
+    "emoji":"👎"
   },
   {
     "label":"Croutes de fromage",
@@ -40,7 +40,7 @@
     "emoji":"👌🥕"
   },
   {
-    "label":"Coquilles d'oeuf",
+    "label":"Coquilles d'oeufs écrasées",
     "compo": [1],
     "emoji":"👌🐣"
   },
@@ -56,11 +56,11 @@
   },
   {
     "label":"Protections hygieniques",
-    "compo": [1],
-    "emoji":"👌"
+    "compo": [0],
+    "emoji":"👎"
   },
   {
-    "label":"Agrumes",
+    "label":"Epluchures d'agrumes en petite quantité",
     "compo": [1],
     "emoji":"👌🍊"
   },
@@ -70,49 +70,79 @@
     "emoji":"👌📄"
   },
   {
-    "label":"Carton",
-    "compo": [1],
-    "emoji":"👌📜"
-  },
-  {
-    "label":"Viande",
-    "compo": [1],
-    "emoji":"👌🥩"
-  },
-  {
-    "label":"Poisson",
-    "compo": [1],
-    "emoji":"👌🐠"
-  },
-  {
-    "label":"Ail",
-    "compo": [1],
-    "emoji":"👌🧄"
-  },
-  {
-    "label":"Oignon",
-    "compo": [1],
-    "emoji":"👌🧅"
-  },
-  {
-    "label":"Déjections d'animaux domestiques",
-    "compo": [1],
-    "emoji":"👌💩"
-  },
-  {
-    "label":"Sacs de supermarché avec la mention 'compostable'",
+    "label":"Cheveux",
     "compo": [1],
     "emoji":"👌"
   },
   {
-    "label":"Litière pour chat",
+    "label":"Carton brun en petit morceaux",
     "compo": [1],
-    "emoji":"👌🐈"
+    "emoji":"👌📜"
+  },
+  {
+    "label":"Os et arretes",
+    "compo": [0],
+    "emoji":"👎🦴"
+  },
+  {
+    "label":"Mouchoir, essuie-tout, serviette en papier",
+    "compo": [1],
+    "emoji":"👌📄"
+  },
+  {
+    "label":"Huiles de friture",
+    "compo": [0],
+    "emoji":"👎🍟"
+  },
+  {
+    "label":"Coquilles d'huitres et moules écrasées",
+    "compo": [1],
+    "emoji":"👌🐚"
+  },
+  {
+    "label":"Feuilles mortes",
+    "compo": [1],
+    "emoji":"👌🍁"
+  },
+  {
+    "label":"Broyat",
+    "compo": [1],
+    "emoji":"👌"
+  },
+  {
+    "label":"Viande",
+    "compo": [0],
+    "emoji":"👎🥩"
+  },
+  {
+    "label":"Poisson",
+    "compo": [0],
+    "emoji":"👎🐠"
+  },
+  {
+    "label":"Epluchures ail et oignon",
+    "compo": [1],
+    "emoji":"👌🧄🧅"
+  },
+  {
+    "label":"Déjections d'animaux domestiques",
+    "compo": [0],
+    "emoji":"👎💩"
+  },
+  {
+    "label":"Sacs de supermarché avec la mention 'compostable'",
+    "compo": [0],
+    "emoji":"👎"
+  },
+  {
+    "label":"Litière pour chat",
+    "compo": [0],
+    "emoji":"👎🐈"
   },
   {
     "label":"Mauvaises herbes",
-    "compo": [1],
-    "emoji":"👌🌿"
+    "compo": [0],
+    "emoji":"👎🌿"
   },
   {
     "label":"Plantes malades",
