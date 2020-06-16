@@ -10,6 +10,11 @@
     "emoji":"👌☕️"
   },
   {
+    "label":"Capsules de Café",
+    "compo":[0],
+    "emoji":"👎☕️"
+  },
+  {
     "label":"Filtre en papier",
     "compo": [1],
     "emoji":"👌☕️"
@@ -45,12 +50,12 @@
     "emoji":"👌🐣"
   },
   {
-    "label":"Fleurs fanées",
+    "label":"Fleurs fanées coupées en morceaux",
     "compo": [1],
     "emoji":"👌🥀"
   },
   {
-    "label":"Plantes d'intérieur",
+    "label":"Plantes d'intérieur coupées en morceaux",
     "compo": [1],
     "emoji":"👌🌵"
   },
@@ -172,7 +177,7 @@
   {
     "label":"Mégots",
     "compo": [0],
-    "emoji":"👌🚬"
+    "emoji":"👎🚬"
   },
   {
     "label":"Couches-culottes",
